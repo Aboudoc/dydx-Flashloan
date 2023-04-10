@@ -75,6 +75,7 @@ npx hardhat
 
 ```shell
 npm i @openzeppelin/contracts@^4.3.2
+npm install --save-dev dotenv
 ```
 
 ### Built With
@@ -137,6 +138,14 @@ dydx will callback this function
 
 ## Test
 
+We will borrow 1 000 000 USDC
+
+To make sure we have enough amount to pay back flashloan, we will fund the contract with 2 000 000 USDC and check the balance of `SOLO` contract
+
+```sh
+npx hardhat test test/flashloan.test.js
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Forking mainnet
@@ -156,7 +165,7 @@ dydx will callback this function
 Note: Replace the `${}` component of the URL with your personal [Alchemy](https://www.alchemy.com/) API key.
 
 ```sh
-npx hardhat test test/swapV3.test.js
+npx hardhat test testunlock-accounts.test.js
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
