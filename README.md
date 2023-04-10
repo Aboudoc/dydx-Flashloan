@@ -31,11 +31,20 @@ Next, set up some state variable, event and struct: `flashUser`, `Log`, `MyCusto
 - Approve the SOLO contract to spend the repayment amount
 - The way you request a flashloan on DyDx is by creating 3 actions:
   - Withdraw: using `_getWithdrawAction()`
-  - Call callFunction() using `_getCallAction()`
-  - Deposit back using `getDepositAction()`
+  - Call callFunction(): using `_getCallAction()`
+  - Deposit: back using `getDepositAction()`
 - We also need `accountInfos[]` that we will get by calling `_getAccountInfo()`
 - Once we created these 3 actions in `operations[]`, we submit it over to the `solo` contract by calling `operate()` and passing in the 3 actions and `accountInfos[]`
 
 ## callFunction Function
 
 dydx will callback this function
+
+- We only want the `solo` contract to be able to call this function, require it to restrict access
+- Check that the initiator of the flashloan is `this` contract by requiring it
+- Decode the `data` passed from the input
+- From `MyCustomData` decoded get back the `repayAmount`
+- Exctract also `bal` to make sure we ahve enough amount to repay back the flashloan
+- Write custom code: Arbitrage. For the example we just set `flashUser` state variable and Log bal, repay and profit variables
+
+## Test
