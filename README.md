@@ -16,10 +16,10 @@
     <img src="images/logo1.png" alt="Logo" width="100" height="80">
   </a>
 
-<h3 align="center">Uniswap V3</h3>
+<h3 align="center">dydx Flashloan</h3>
 
   <p align="center">
-    Uniswap V3
+    dydx Flashloan
     <br />
     <a href="https://github.com/Aboudoc/dydx-Flashloan"><strong>Explore the docs »</strong></a>
     <br />
