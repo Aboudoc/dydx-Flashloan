@@ -1,6 +1,6 @@
 # DyDx Solo Margin - flashloan
 
-## Setup the project
+## Setup the project
 
 ```shell
 npm init -y
@@ -12,15 +12,15 @@ npx hardhat
 npm i @openzeppelin/contracts@^4.3.2
 ```
 
-## Learn more about DyDx
+## Learn more about dydx
 
-## DyDxSoloMargin contract
+## DyDxSoloMargin contract
 
 First thing to do, set the address of the contract to call flashloan on dydx (`SOLO`)
 
 Next, set up some state variable, event and struct: `flashUser`, `Log`, `MyCustomData`
 
-## initiateFlashloan() Function
+## initiateFlashloan Function
 
 Market ID's
 0 WETH
@@ -38,4 +38,4 @@ The way you request a flashloan on DyDx is by creating 3 actions:
 
 Once we created these 3 actions, we submit it over to the `solo` contract by calling `operate()` and passing in the 3 actions
 
-## callFunction() Function
+## callFunction Function
