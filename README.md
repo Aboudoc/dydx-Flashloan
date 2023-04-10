@@ -12,6 +12,19 @@ npx hardhat
 npm i @openzeppelin/contracts@^4.3.2
 ```
 
+### Built With
+
+- [![Hardhat][Hardhat]][Hardhat-url]
+- [![Ethers][Ethers.js]][Ethers-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Usage
+
+If you need testnet funds, use the [Alchemy testnet faucet](https://goerlifaucet.com/).
+
+**This project shows how to swap, add and remove liquidity**
+
 ## Learn more about dydx
 
 On DyDx the fees that you have to pay for flashloan is **2 wei**
@@ -48,3 +61,25 @@ dydx will callback this function
 - Write custom code: Arbitrage. For the example we just set `flashUser` state variable and Log bal, repay and profit variables
 
 ## Test
+
+## Forking mainnet
+
+`hardhat.config.js`
+
+```sh
+  networks: {
+        hardhat: {
+          forking: {
+            url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+       },
+     },
+  }
+```
+
+Note: Replace the `${}` component of the URL with your personal [Alchemy](https://www.alchemy.com/) API key.
+
+```sh
+npx hardhat test test/swapV3.test.js
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
