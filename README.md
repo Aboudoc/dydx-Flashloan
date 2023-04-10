@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Aboudoc/dydx-Flashloan.git">
-    <img src="images/logo1.png" alt="Logo" width="160" height="80">
+    <img src="images/logo1.png" alt="Logo" width="160" height="100">
   </a>
 
 <h3 align="center">Solo Margin</h3>
