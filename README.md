@@ -50,15 +50,11 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#Constant-Product-AMM">Constant Product AMM</a></li>
-    <li><a href="#Test-Single-and-Multi-hop-swap">Test Single and Multi hop swap</a></li>
-    <li><a href="#dydx-Flashloan-Single-Hop-Swap">Uniswap V2 Single Hop Swap</a></li>
-    <ul>
-        <li><a href="#State-variables">State variables</a></li>
-        <li><a href="#Function-swapExactInputSingleHop">Function swapExactInputSingleHop</a></li>
-        <li><a href="#Function-swapExactOutputSingleHop">Function swapExactOutputSingleHop</a></li>
-      </ul>
-    <li><a href="#dydx-Flashloan-Multi-Hop-Swap">Uniswap V3 Multi Hop Swap</a></li>
+    <li><a href="#Learn-more-about-dydx">Learn more about dydx</a></li>
+    <li><a href="#DyDxSoloMargin-contract">DyDxSoloMargin contract</a></li>
+    <li><a href="#initiateFlashloan-Function">initiateFlashloan Function</a></li>
+    <li><a href="#callFunction-Function">callFunction Function</a></li>
+    <li><a href="#Test">Test</a></li>
     <li><a href="#Forking-mainnet">Forking mainnet</a></li>
     <li><a href="#Note">Note</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
