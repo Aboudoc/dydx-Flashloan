@@ -4,6 +4,7 @@ pragma experimental ABIEncoderV2;
 
 import "./interfaces/DydxFlashloanBase.sol";
 import "./interfaces/ICallee.sol";
+import "hardhat/console.sol";
 
 contract TestDydxFlashloan is ICallee, DydxFlashloanBase {
     address private constant SOLO = 0x1E0447b19BB6EcFdAe1e4AE1694b0C3659614e4e;
@@ -26,7 +27,7 @@ contract TestDydxFlashloan is ICallee, DydxFlashloanBase {
 
         Actions.ActionArgs[] memory operations = new Actions.ActionArgs[](3);
         // 3 operations
-        operations[0] = _getWithdrawAction(marketId, repayAmount);
+        operations[0] = _getWithdrawAction(marketId, _amount);
         bytes memory data = abi.encode(
             MyCustomData({token: _token, repayAmount: repayAmount})
         );
@@ -58,5 +59,8 @@ contract TestDydxFlashloan is ICallee, DydxFlashloanBase {
         emit Log("bal", bal);
         emit Log("repay", repayAmount);
         emit Log("profit", bal - repayAmount);
+        console.log("bal", bal);
+        console.log("repay", repayAmount);
+        console.log("profit", bal - repayAmount);
     }
 }

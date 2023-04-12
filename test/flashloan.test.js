@@ -19,7 +19,7 @@ describe("dydx", function () {
     beforeEach(async function () {
       fundAmount = 2000000n * 10n ** 6n;
       borrowAmount = 800000n * 10n ** 6n;
-      fundAmountWeth = 3000n * 10n ** 18n;
+      fundAmountWeth = 1n * 10n ** 18n;
       borrowAmountWeth = 1500n * 10n ** 18n;
 
       accounts = await ethers.getSigners();
